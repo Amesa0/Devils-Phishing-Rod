@@ -135,7 +135,7 @@ reset_color() {
 ## Exit message
 msg_exit() {
         { clear; banner; echo; }
-        echo -e "${GREENBG}${BLACK} Thank you for using this tool. Have a good day.${RESETBG}\n"
+        echo -e "${GREENBG}${BLUE} Thank you for using this tool. Have a good day.${RESETBG}\n"
         { reset_color; exit 0; }
 }
 
@@ -165,10 +165,10 @@ fi
 #Internet check for update
 check_net_update(){
 	check_netstats
-	if [ $netstats=="Online" ]; then
+	if [ $netstats=="Working" ]; then
 		check_update
 	else
-		echo "${RED}Your offline, Check your internet and try again."
+		echo "${GRAY}Your offline, Check your internet and try again."
 		sleep 5
 		mainmenu
 	fi
